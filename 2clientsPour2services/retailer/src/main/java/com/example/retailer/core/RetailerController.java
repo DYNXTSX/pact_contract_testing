@@ -11,9 +11,9 @@ public class RetailerController {
     @Autowired
     private RetailerService retailerService;
 
-    @GetMapping("/item/{id}")
-    public Item getItemDetails(@PathVariable(value = "id") String itemId) {
-        return retailerService.getItemDetails(itemId);
+    @GetMapping("/music/{id}")
+    public Music getMusicDetails(@PathVariable(value = "id") String musicId) {
+        return retailerService.getMusicDetails(musicId);
     }
 
     @GetMapping("/order/{id}")

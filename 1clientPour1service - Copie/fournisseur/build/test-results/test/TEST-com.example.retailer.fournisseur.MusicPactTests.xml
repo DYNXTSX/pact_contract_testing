@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.example.retailer.fournisseur.MusicPactTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-03-17T09:53:53" hostname="DESKTOP-GUUQG48" time="1.297">
+  <properties/>
+  <testcase name="client - Upon Get music details for music id" classname="com.example.retailer.fournisseur.MusicPactTests" time="1.297"/>
+  <system-out><![CDATA[
+Verifying a pact between client and fournisseur
+  Given Get music details
+  Get music details for music id
+2022-03-17 10:53:54.389  INFO 6448 --- [o-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-17 10:53:54.390  INFO 6448 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-17 10:53:54.414  INFO 6448 --- [o-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+    returns a response which
+      has status code 200 (OK)
+      includes headers
+        "Content-Type" with value "application/json" (OK)
+      has a matching body (OK)
+2022-03-17 10:53:54.826  WARN 6448 --- [    Test worker] a.c.d.p.p.DefaultTestResultAccumulator   : Set the provider version using the 'pact.provider.version' property. Defaulting to '0.0.0'
+2022-03-17 10:53:54.927  INFO 6448 --- [    Test worker] a.c.d.p.p.DefaultVerificationReporter    : Published verification result of 'au.com.dius.pact.pactbroker.TestResult$Ok@3284de45' for consumer 'Consumer(name=client)'
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

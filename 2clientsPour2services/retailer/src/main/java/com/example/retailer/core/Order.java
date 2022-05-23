@@ -3,12 +3,12 @@ package com.example.retailer.core;
 public class Order {
     private String customer;
     private Double total;
-    private Integer noOfItems;
+    private Integer noOfMusic;
 
-    public Order(String customer, Double total, Integer noOfItems) {
+    public Order(String customer, Double total, Integer noOfMusic) {
         this.customer = customer;
         this.total = total;
-        this.noOfItems = noOfItems;
+        this.noOfMusic = noOfMusic;
     }
 
     public String getCustomer() {
@@ -27,11 +27,11 @@ public class Order {
         this.total = total;
     }
 
-    public Integer getNoOfItems() {
-        return noOfItems;
+    public Integer noOfMusic() {
+        return noOfMusic;
     }
 
-    public void setNoOfItems(Integer noOfItems) {
-        this.noOfItems = noOfItems;
+    public void noOfMusic(Integer noOfMusic) {
+        this.noOfMusic = noOfMusic;
     }
 }
