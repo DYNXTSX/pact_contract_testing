@@ -26,29 +26,8 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Step 4 - Go to good directory
-        run:
-          cd 3clientsPour1service
-
-      - name: Step 5 - Test 1st consumer
-        run:
-          cd consumer1
-          mvn test
-
-      - name: Step 6 - Test 2nd consumer
-        run:
-          cd consumer2
-          mvn test
-
-      - name: Step 7 - Test 3rd consumer
-        run:
-          cd consumer3
-          mvn test
-
-      - name: Step 8 - Test the provider side
-        run:
-          cd provider
-          mvn test
-        
+        run: la -a
+          
         
         
         
