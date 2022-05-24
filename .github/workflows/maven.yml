@@ -22,11 +22,11 @@ jobs:
         with:
             java-version: '1.8'
 
-      - name: Step 3 - Have GitHub Actions Build Maven project
+      - name: Step 3 - Go to good directory
         run: cd 3clientsPour1service
 
-      - name: Step 4 - Go to good directory
-        run: mvn -B package --file pom.xml
+      - name: Step 4 - Have GitHub Actions Build Maven project
+        run: la -a
 
       - name: Step 5 - Test 1st consumer
         run:
