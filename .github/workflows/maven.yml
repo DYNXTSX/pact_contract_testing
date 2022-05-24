@@ -26,7 +26,7 @@ jobs:
         run: ls -a
         
       - name: Step 3 - Go to good directory
-        run: 
+        run: |
           cd 3clientsPour1service
           ls -a
 
