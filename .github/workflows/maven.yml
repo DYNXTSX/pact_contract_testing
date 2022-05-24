@@ -26,7 +26,7 @@ jobs:
         run: cd 3clientsPour1service
 
       - name: Step 4 - Have GitHub Actions Build Maven project
-        run: la -a
+        run: ls -a
 
       - name: Step 5 - Test 1st consumer
         run:
