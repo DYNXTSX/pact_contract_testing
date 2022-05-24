@@ -21,32 +21,14 @@ jobs:
         uses: actions/setup-java@v1
         with:
             java-version: '1.8'
-
+            
+      - name: Step 3 - Go to good directory
+        run: ls -a
+        
       - name: Step 3 - Go to good directory
         run: cd 3clientsPour1service
 
-      - name: Step 4 - Have GitHub Actions Build Maven project
-        run: ls -a
-
-      - name: Step 5 - Test 1st consumer
-        run:
-          cd consumer1
-          mvn test
-
-      - name: Step 6 - Test 2nd consumer
-        run:
-          cd consumer2
-          mvn test
-
-      - name: Step 7 - Test 3rd consumer
-        run:
-          cd consumer3
-          mvn test
-
-      - name: Step 8 - Test the provider side
-        run:
-          cd provider
-          mvn test
+      
         
           
         
