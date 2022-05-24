@@ -23,12 +23,35 @@ jobs:
             java-version: '1.8'
             
       - name: Step 3 - Go to good directory
-        run: ls -a
-        
-      - name: Step 3 - Go to good directory
         run: |
           cd 3clientsPour1service
-          ls -a
+          mvn -B package --file pom.xml
+        
+      - name: Step 4 - Test 1st consumer
+        run: |
+          cd 3clientsPour1service
+          cd consumer1
+          mvn test
+          
+      - name: Step 5 - Test 2nd consumer
+        run: |
+          cd 3clientsPour1service
+          cd consumer2
+          mvn test  
+          
+      - name: Step 6 - Test 3rd consumer
+        run: |
+          cd 3clientsPour1service
+          cd consumer3
+          mvn test
+          
+      - name: Step 7 - Test the provider side
+        run: |
+          cd 3clientsPour1service
+          cd provider
+          mvn test
+          
+          
 
       
         
