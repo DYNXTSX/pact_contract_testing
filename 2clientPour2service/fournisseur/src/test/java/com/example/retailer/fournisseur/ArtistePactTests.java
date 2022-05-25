@@ -8,6 +8,7 @@ import au.com.dius.pact.provider.junit.target.Target;
 import au.com.dius.pact.provider.junit.target.TestTarget;
 import au.com.dius.pact.provider.spring.SpringRestPactRunner;
 import au.com.dius.pact.provider.spring.target.SpringBootHttpTarget;
+import com.example.retailer.core.Artiste;
 import com.example.retailer.core.Music;
 import com.example.retailer.core.FournisseurService;
 import com.example.retailer.FournisseurApplication;
@@ -21,7 +22,7 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 @RunWith(SpringRestPactRunner.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 @Provider("fournisseur")
-@Consumer("client")
+@Consumer("artiste")
 @PactBroker(host = "localhost", port = "9292")
 public class ArtistePactTests {
 
@@ -30,7 +31,7 @@ public class ArtistePactTests {
 
     @State("Get artiste details")
     public void testBuyerOneContract(){
-        Artiste artiste = new Music("TEST CLIENT", 21, 1);
+        Artiste artiste = new Artiste("TEST CLIENT", 21, 1);
 
         FournisseurService mock = Mockito.mock(FournisseurService.class);
 

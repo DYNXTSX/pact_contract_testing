@@ -5,7 +5,9 @@ public class Artiste {
     private Integer age;
     private Integer noOfMusic;
 
-    public Music(String name, Integer age, Integer noOfMusic){
+    public Artiste(){}
+
+    public Artiste(String name, Integer age, Integer noOfMusic){
         this.name = name;
         this.age = age;
         this.noOfMusic = noOfMusic;

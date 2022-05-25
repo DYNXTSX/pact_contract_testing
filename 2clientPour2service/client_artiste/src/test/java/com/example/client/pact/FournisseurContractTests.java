@@ -35,7 +35,7 @@ public class FournisseurContractTests {
     public PactProviderRuleMk2 mockFournisseur = new PactProviderRuleMk2("fournisseur",
             HOST_NAME, PORT, this);
 
-    @Pact(consumer = "client", provider = "fournisseur")
+    @Pact(consumer = "artiste", provider = "fournisseur")
     public RequestResponsePact createPactForGetLastUpdatedTimestamp(PactDslWithProvider builder) {
 
         PactDslJsonBody body = new PactDslJsonBody()
@@ -47,8 +47,8 @@ public class FournisseurContractTests {
         headers.put("Content-Type","application/json");
 
         return builder
-                .given("Get music details")
-                .uponReceiving("Get music details for music id")
+                .given("Get artiste details")
+                .uponReceiving("Get artiste details for artiste id")
                 .path("/artiste/2")
                 .method(HttpMethod.GET.name())
                 .willRespondWith()
@@ -61,8 +61,8 @@ public class FournisseurContractTests {
     @Test
     @PactVerification(value = "fournisseur")
     public void testGetItemDetailsFromRetailer() {
-        Artiste artiste = clientService.getMusicDetail();
-        assertEquals(music.getName(), "XXXTENTACION");
+        Artiste artiste = clientService.getArtisteDetail();
+        assertEquals(artiste.getName(), "XXXTENTACION");
     }
 
 }

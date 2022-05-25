@@ -6,6 +6,6 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class ClientService {
     public Artiste getArtisteDetail(){
-        return new RestTemplate().getForObject("http://localhost:8088/artiste/2", Music.class);
+        return new RestTemplate().getForObject("http://localhost:8088/artiste/2", Artiste.class);
     }
 }

@@ -7,6 +7,57 @@
     },
     "interactions": [
         {
+            "description": "Get artiste details for artiste id",
+            "request": {
+                "method": "GET",
+                "path": "/artiste/2"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "age": 21,
+                    "name": "XXXTENTACION",
+                    "noOfMusic": 1
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.age": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.noOfMusic": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "Get artiste details"
+                }
+            ]
+        },
+        {
             "description": "Get music details for music id",
             "request": {
                 "method": "GET",
@@ -24,7 +75,7 @@
                 },
                 "matchingRules": {
                     "body": {
-                        "$.name": {
+                        "$.artiste": {
                             "matchers": [
                                 {
                                     "match": "type"
@@ -32,7 +83,7 @@
                             ],
                             "combine": "AND"
                         },
-                        "$.artiste": {
+                        "$.name": {
                             "matchers": [
                                 {
                                     "match": "type"
