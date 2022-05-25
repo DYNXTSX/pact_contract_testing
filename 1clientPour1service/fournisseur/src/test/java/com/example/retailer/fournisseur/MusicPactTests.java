@@ -31,10 +31,6 @@ public class MusicPactTests {
 
     @State("Get music details")
     public void testBuyerOneContract(){
-        Music music = new Music("TEST CLIENT", "TEST", 2019);
-
         FournisseurService mock = Mockito.mock(FournisseurService.class);
-
-        Mockito.when(mock.getMusicDetails("SomeId")).thenReturn(music);
     }
 }
