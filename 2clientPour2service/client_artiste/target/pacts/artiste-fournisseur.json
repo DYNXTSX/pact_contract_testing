@@ -1,0 +1,69 @@
+{
+    "provider": {
+        "name": "fournisseur"
+    },
+    "consumer": {
+        "name": "artiste"
+    },
+    "interactions": [
+        {
+            "description": "Get artiste details for artiste id",
+            "request": {
+                "method": "GET",
+                "path": "/artiste/2"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "age": 21,
+                    "name": "XXXTENTACION",
+                    "noOfMusic": 1
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.name": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.age": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.noOfMusic": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "Get artiste details"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pactSpecification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.24"
+        }
+    }
+}
